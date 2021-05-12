@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue中使用 lib-flexible 和 px2rem-loader | 诚毅物联网</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="诚毅物联网-前端组件库">
+    
+    <link rel="preload" href="/assets/css/0.styles.ed002db5.css" as="style"><link rel="preload" href="/assets/js/app.2dd97a88.js" as="script"><link rel="preload" href="/assets/js/3.d6f3b588.js" as="script"><link rel="preload" href="/assets/js/51.cd48b1ee.js" as="script"><link rel="preload" href="/assets/js/19.e43cf656.js" as="script"><link rel="prefetch" href="/assets/js/10.71c9a9ec.js"><link rel="prefetch" href="/assets/js/11.28fdbcac.js"><link rel="prefetch" href="/assets/js/12.0d90ebcf.js"><link rel="prefetch" href="/assets/js/13.3865491f.js"><link rel="prefetch" href="/assets/js/14.12c7dd0f.js"><link rel="prefetch" href="/assets/js/15.90bc0fac.js"><link rel="prefetch" href="/assets/js/16.7a73d70c.js"><link rel="prefetch" href="/assets/js/17.5ca0ec4a.js"><link rel="prefetch" href="/assets/js/18.8416097b.js"><link rel="prefetch" href="/assets/js/2.0b00b304.js"><link rel="prefetch" href="/assets/js/20.dfe96f99.js"><link rel="prefetch" href="/assets/js/21.a37c1324.js"><link rel="prefetch" href="/assets/js/22.4d106612.js"><link rel="prefetch" href="/assets/js/23.1dd62eb1.js"><link rel="prefetch" href="/assets/js/24.a6d4006f.js"><link rel="prefetch" href="/assets/js/25.a996bf0c.js"><link rel="prefetch" href="/assets/js/26.7ed9654f.js"><link rel="prefetch" href="/assets/js/27.4d78b8e6.js"><link rel="prefetch" href="/assets/js/28.3537c415.js"><link rel="prefetch" href="/assets/js/29.4dcc400d.js"><link rel="prefetch" href="/assets/js/30.ff98ff45.js"><link rel="prefetch" href="/assets/js/31.91456ee5.js"><link rel="prefetch" href="/assets/js/32.574bd189.js"><link rel="prefetch" href="/assets/js/33.16a8eb71.js"><link rel="prefetch" href="/assets/js/34.e3a24877.js"><link rel="prefetch" href="/assets/js/35.ed3ea57a.js"><link rel="prefetch" href="/assets/js/36.927fa32a.js"><link rel="prefetch" href="/assets/js/37.078f68a0.js"><link rel="prefetch" href="/assets/js/38.40baabc6.js"><link rel="prefetch" href="/assets/js/39.6c149c6c.js"><link rel="prefetch" href="/assets/js/4.94ef6b34.js"><link rel="prefetch" href="/assets/js/40.559568c3.js"><link rel="prefetch" href="/assets/js/41.48628e40.js"><link rel="prefetch" href="/assets/js/42.8eae4a37.js"><link rel="prefetch" href="/assets/js/43.43845891.js"><link rel="prefetch" href="/assets/js/44.e2d3d924.js"><link rel="prefetch" href="/assets/js/45.e5ef185b.js"><link rel="prefetch" href="/assets/js/46.b99a54c7.js"><link rel="prefetch" href="/assets/js/47.cede9006.js"><link rel="prefetch" href="/assets/js/48.7c8af905.js"><link rel="prefetch" href="/assets/js/49.b0b27f81.js"><link rel="prefetch" href="/assets/js/5.7a61c163.js"><link rel="prefetch" href="/assets/js/50.9713a8f4.js"><link rel="prefetch" href="/assets/js/52.73809b1e.js"><link rel="prefetch" href="/assets/js/53.5fec2b89.js"><link rel="prefetch" href="/assets/js/54.63e25ebf.js"><link rel="prefetch" href="/assets/js/55.6a947b00.js"><link rel="prefetch" href="/assets/js/56.1ce12488.js"><link rel="prefetch" href="/assets/js/57.a885e5ea.js"><link rel="prefetch" href="/assets/js/58.ebfbcc6a.js"><link rel="prefetch" href="/assets/js/59.ff65077e.js"><link rel="prefetch" href="/assets/js/6.4a9aeafb.js"><link rel="prefetch" href="/assets/js/60.a05227d4.js"><link rel="prefetch" href="/assets/js/61.83957611.js"><link rel="prefetch" href="/assets/js/62.84c2eabf.js"><link rel="prefetch" href="/assets/js/63.9ebbcd16.js"><link rel="prefetch" href="/assets/js/64.8bf72306.js"><link rel="prefetch" href="/assets/js/65.4b897cc0.js"><link rel="prefetch" href="/assets/js/66.47792baa.js"><link rel="prefetch" href="/assets/js/67.4bfffe40.js"><link rel="prefetch" href="/assets/js/68.bdbbc350.js"><link rel="prefetch" href="/assets/js/69.2b6a4baf.js"><link rel="prefetch" href="/assets/js/7.fc1a8f85.js"><link rel="prefetch" href="/assets/js/70.7e160bbc.js"><link rel="prefetch" href="/assets/js/71.7bd14ea0.js"><link rel="prefetch" href="/assets/js/72.a25355f0.js"><link rel="prefetch" href="/assets/js/73.6f350bf7.js"><link rel="prefetch" href="/assets/js/74.54f7fa1e.js"><link rel="prefetch" href="/assets/js/8.6a81b744.js"><link rel="prefetch" href="/assets/js/9.96065467.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ed002db5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="诚毅物联网" class="logo"> <span class="site-name can-hide">诚毅物联网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/guide/" aria-current="page" class="sidebar-link">快速上手</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/upload/upload.html" class="sidebar-link">Upload</a></li><li><a href="/guide/map/map.html" class="sidebar-link">vue 三方地图</a></li><li><a href="/guide/QRCode/QRCode.html" class="sidebar-link">vue 二维码显示 下载</a></li><li><a href="/guide/MapDrilling/MapDrilling.html" class="sidebar-link">Echarts地图钻取</a></li><li><a href="/guide/progressBar/progressBar.html" class="sidebar-link">刻度尺进度条组件</a></li><li><a href="/guide/EchartsMap/EchartsMap.html" class="sidebar-link">Echarts地图封装</a></li><li><a href="/guide/px-rem/px-rem.html" aria-current="page" class="active sidebar-link">vue中px转rem</a></li><li><a href="/guide/uploadJavaServe/uploadJavaServe.html" class="sidebar-link">java后台项目上传宝塔服务器流程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue中使用-lib-flexible-和-px2rem-loader"><a href="#vue中使用-lib-flexible-和-px2rem-loader" class="header-anchor">#</a> vue中使用 lib-flexible 和 px2rem-loader</h1> <blockquote><p>一、安装<br>
+npm install lib-flexible --save<br>
+npm install px2rem-loader --save<br>
+二、配置 build/utils<br>
+详情看代码<br>
+三、在 src/utils 下创建flexible.js文件<br>
+详情看代码<br>
+四、在 src/main.js 中引入<br>
+import '@/utils/flexible'</p></blockquote> <div class="demo" data-v-4dd5b8ae><div class="component-wrapper" data-v-4dd5b8ae><div class="component-wrapper-demo" data-v-4dd5b8ae>
+  代码
+  </div> <div class="code-content" style="height: 0;" data-v-4dd5b8ae><div class="code-content-height" data-v-4dd5b8ae><pre data-v-4dd5b8ae><code class="hljs vue">utils配置
+
+const cssLoader = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: options.sourceMap
+  }
+}
+
+const px2remLoader = {
+  loader: 'px2rem-loader',
+  options: {
+      remUnit: 192
+  }
+}
+        
+const postcssLoader = {
+  loader: 'postcss-loader',
+  options: {
+    sourceMap: options.sourceMap
+  }
+}
+
+function generateLoaders (loader, loaderOptions) {
+  const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
+
+  if (loader) {
+    loaders.push({
+      loader: loader + '-loader',
+      options: Object.assign({}, loaderOptions, {
+        sourceMap: options.sourceMap
+      })
+    })
+  }
+  ......
+
+
+
+
+
+flexible.js代码
+
+(function () {
+    // flexible.css
+  var cssText =
+        '' +
+        '@charset "utf-8";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-overflow-scrolling:touch}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:transparent}body,html{font-family:"Microsoft YaHei",sans-serif,Tahoma,Arial}article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}input,input[type=button],input[type=reset],input[type=submit]{resize:none;border:none;-webkit-appearance:none;border-radius:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:after,q:before{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}a,ins{text-decoration:none}a:active,a:hover,a:link,a:visited{background:0 0;-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;outline:0;text-decoration:none}'
+    // cssText end
+
+  var styleEl = document.createElement('style')
+  document.getElementsByTagName('head')[0].appendChild(styleEl)
+  if (styleEl.styleSheet) {
+    if (!styleEl.styleSheet.disabled) {
+      styleEl.styleSheet.cssText = cssText
+    }
+  } else {
+    try {
+      styleEl.innerHTML = cssText
+    } catch (e) {
+      styleEl.innerText = cssText
+    }
+  }
+})()
+
+;
+(function (win, lib) {
+  var doc = win.document
+  var docEl = doc.documentElement
+  var metaEl = doc.querySelector('meta[name="viewport"]')
+  var flexibleEl = doc.querySelector('meta[name="flexible"]')
+  var dpr = 0
+  var scale = 0
+  var tid
+  var flexible = lib.flexible || (lib.flexible = {})
+
+  if (metaEl) {
+    console.warn('将根据已有的meta标签来设置缩放比例')
+    var match = metaEl.getAttribute('content').match(/initial-scale=([d.]+)/)
+    if (match) {
+      scale = parseFloat(match[1])
+      dpr = parseInt(1 / scale)
+    }
+  } else if (flexibleEl) {
+    var content = flexibleEl.getAttribute('content')
+    if (content) {
+      var initialDpr = content.match(/initial-dpr=([d.]+)/)
+      var maximumDpr = content.match(/maximum-dpr=([d.]+)/)
+      if (initialDpr) {
+        dpr = parseFloat(initialDpr[1])
+        scale = parseFloat((1 / dpr).toFixed(2))
+      }
+      if (maximumDpr) {
+        dpr = parseFloat(maximumDpr[1])
+        scale = parseFloat((1 / dpr).toFixed(2))
+      }
+    }
+  }
+
+  if (!dpr &amp;&amp; !scale) {
+    // var isAndroid = win.navigator.appVersion.match(/android/gi)
+    var isIPhone = win.navigator.appVersion.match(/iphone/gi)
+    var devicePixelRatio = win.devicePixelRatio
+    if (isIPhone) {
+            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+      if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) {
+        dpr = 3
+      } else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2)) {
+        dpr = 2
+      } else {
+        dpr = 1
+      }
+    } else {
+            // 其他设备下，仍旧使用1倍的方案
+      dpr = 1
+    }
+    scale = 1 / dpr
+  }
+
+  docEl.setAttribute('data-dpr', dpr)
+  if (!metaEl) {
+    metaEl = doc.createElement('meta')
+    metaEl.setAttribute('name', 'viewport')
+    metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no')
+    if (docEl.firstElementChild) {
+      docEl.firstElementChild.appendChild(metaEl)
+    } else {
+      var wrap = doc.createElement('div')
+      wrap.appendChild(metaEl)
+      doc.write(wrap.innerHTML)
+    }
+  }
+
+  function refreshRem () {
+    var width = docEl.getBoundingClientRect().width
+    if (width / dpr &gt; 540) {
+      width = width * dpr
+    }
+    var rem = width / 10
+    docEl.style.fontSize = rem + 'px'
+    flexible.rem = win.rem = rem
+  }
+
+  win.addEventListener('resize', function () {
+    clearTimeout(tid)
+    tid = setTimeout(refreshRem, 300)
+  }, false)
+  win.addEventListener('pageshow', function (e) {
+    if (e.persisted) {
+      clearTimeout(tid)
+      tid = setTimeout(refreshRem, 300)
+    }
+  }, false)
+
+  if (doc.readyState === 'complete') {
+    doc.body.style.fontSize = 12 * dpr + 'px'
+  } else {
+    doc.addEventListener('DOMContentLoaded', function (e) {
+      doc.body.style.fontSize = 12 * dpr + 'px'
+    }, false)
+  }
+
+  refreshRem()
+
+  flexible.dpr = win.dpr = dpr
+  flexible.refreshRem = refreshRem
+  flexible.rem2px = function (d) {
+    var val = parseFloat(d) * this.rem
+    if (typeof d === 'string' &amp;&amp; d.match(/rem$/)) {
+      val += 'px'
+    }
+    return val
+  }
+  flexible.px2rem = function (d) {
+    var val = parseFloat(d) / this.rem
+    if (typeof d === 'string' &amp;&amp; d.match(/px$/)) {
+      val += 'rem'
+    }
+    return val
+  }
+})(window, window['lib'] || (window['lib'] = {}))</code></pre></div></div> <div class="lock-code" data-v-4dd5b8ae><i class="el-icon-caret-top icon-down" data-v-4dd5b8ae></i> <span class="lock-code-word" data-v-4dd5b8ae>隐藏代码</span></div></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/12/2021, 9:57:27 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/EchartsMap/EchartsMap.html" class="prev">
+        Echarts地图封装
+      </a></span> <span class="next"><a href="/guide/uploadJavaServe/uploadJavaServe.html">
+        java后台项目上传宝塔服务器流程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2dd97a88.js" defer></script><script src="/assets/js/3.d6f3b588.js" defer></script><script src="/assets/js/51.cd48b1ee.js" defer></script><script src="/assets/js/19.e43cf656.js" defer></script>
+  </body>
+</html>

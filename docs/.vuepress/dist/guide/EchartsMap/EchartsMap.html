@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Echarts地图封装 | 诚毅物联网</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="诚毅物联网-前端组件库">
+    
+    <link rel="preload" href="/assets/css/0.styles.ed002db5.css" as="style"><link rel="preload" href="/assets/js/app.2dd97a88.js" as="script"><link rel="preload" href="/assets/js/3.d6f3b588.js" as="script"><link rel="preload" href="/assets/js/45.e5ef185b.js" as="script"><link rel="preload" href="/assets/js/19.e43cf656.js" as="script"><link rel="prefetch" href="/assets/js/10.71c9a9ec.js"><link rel="prefetch" href="/assets/js/11.28fdbcac.js"><link rel="prefetch" href="/assets/js/12.0d90ebcf.js"><link rel="prefetch" href="/assets/js/13.3865491f.js"><link rel="prefetch" href="/assets/js/14.12c7dd0f.js"><link rel="prefetch" href="/assets/js/15.90bc0fac.js"><link rel="prefetch" href="/assets/js/16.7a73d70c.js"><link rel="prefetch" href="/assets/js/17.5ca0ec4a.js"><link rel="prefetch" href="/assets/js/18.8416097b.js"><link rel="prefetch" href="/assets/js/2.0b00b304.js"><link rel="prefetch" href="/assets/js/20.dfe96f99.js"><link rel="prefetch" href="/assets/js/21.a37c1324.js"><link rel="prefetch" href="/assets/js/22.4d106612.js"><link rel="prefetch" href="/assets/js/23.1dd62eb1.js"><link rel="prefetch" href="/assets/js/24.a6d4006f.js"><link rel="prefetch" href="/assets/js/25.a996bf0c.js"><link rel="prefetch" href="/assets/js/26.7ed9654f.js"><link rel="prefetch" href="/assets/js/27.4d78b8e6.js"><link rel="prefetch" href="/assets/js/28.3537c415.js"><link rel="prefetch" href="/assets/js/29.4dcc400d.js"><link rel="prefetch" href="/assets/js/30.ff98ff45.js"><link rel="prefetch" href="/assets/js/31.91456ee5.js"><link rel="prefetch" href="/assets/js/32.574bd189.js"><link rel="prefetch" href="/assets/js/33.16a8eb71.js"><link rel="prefetch" href="/assets/js/34.e3a24877.js"><link rel="prefetch" href="/assets/js/35.ed3ea57a.js"><link rel="prefetch" href="/assets/js/36.927fa32a.js"><link rel="prefetch" href="/assets/js/37.078f68a0.js"><link rel="prefetch" href="/assets/js/38.40baabc6.js"><link rel="prefetch" href="/assets/js/39.6c149c6c.js"><link rel="prefetch" href="/assets/js/4.94ef6b34.js"><link rel="prefetch" href="/assets/js/40.559568c3.js"><link rel="prefetch" href="/assets/js/41.48628e40.js"><link rel="prefetch" href="/assets/js/42.8eae4a37.js"><link rel="prefetch" href="/assets/js/43.43845891.js"><link rel="prefetch" href="/assets/js/44.e2d3d924.js"><link rel="prefetch" href="/assets/js/46.b99a54c7.js"><link rel="prefetch" href="/assets/js/47.cede9006.js"><link rel="prefetch" href="/assets/js/48.7c8af905.js"><link rel="prefetch" href="/assets/js/49.b0b27f81.js"><link rel="prefetch" href="/assets/js/5.7a61c163.js"><link rel="prefetch" href="/assets/js/50.9713a8f4.js"><link rel="prefetch" href="/assets/js/51.cd48b1ee.js"><link rel="prefetch" href="/assets/js/52.73809b1e.js"><link rel="prefetch" href="/assets/js/53.5fec2b89.js"><link rel="prefetch" href="/assets/js/54.63e25ebf.js"><link rel="prefetch" href="/assets/js/55.6a947b00.js"><link rel="prefetch" href="/assets/js/56.1ce12488.js"><link rel="prefetch" href="/assets/js/57.a885e5ea.js"><link rel="prefetch" href="/assets/js/58.ebfbcc6a.js"><link rel="prefetch" href="/assets/js/59.ff65077e.js"><link rel="prefetch" href="/assets/js/6.4a9aeafb.js"><link rel="prefetch" href="/assets/js/60.a05227d4.js"><link rel="prefetch" href="/assets/js/61.83957611.js"><link rel="prefetch" href="/assets/js/62.84c2eabf.js"><link rel="prefetch" href="/assets/js/63.9ebbcd16.js"><link rel="prefetch" href="/assets/js/64.8bf72306.js"><link rel="prefetch" href="/assets/js/65.4b897cc0.js"><link rel="prefetch" href="/assets/js/66.47792baa.js"><link rel="prefetch" href="/assets/js/67.4bfffe40.js"><link rel="prefetch" href="/assets/js/68.bdbbc350.js"><link rel="prefetch" href="/assets/js/69.2b6a4baf.js"><link rel="prefetch" href="/assets/js/7.fc1a8f85.js"><link rel="prefetch" href="/assets/js/70.7e160bbc.js"><link rel="prefetch" href="/assets/js/71.7bd14ea0.js"><link rel="prefetch" href="/assets/js/72.a25355f0.js"><link rel="prefetch" href="/assets/js/73.6f350bf7.js"><link rel="prefetch" href="/assets/js/74.54f7fa1e.js"><link rel="prefetch" href="/assets/js/8.6a81b744.js"><link rel="prefetch" href="/assets/js/9.96065467.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ed002db5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="诚毅物联网" class="logo"> <span class="site-name can-hide">诚毅物联网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/guide/" aria-current="page" class="sidebar-link">快速上手</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/upload/upload.html" class="sidebar-link">Upload</a></li><li><a href="/guide/map/map.html" class="sidebar-link">vue 三方地图</a></li><li><a href="/guide/QRCode/QRCode.html" class="sidebar-link">vue 二维码显示 下载</a></li><li><a href="/guide/MapDrilling/MapDrilling.html" class="sidebar-link">Echarts地图钻取</a></li><li><a href="/guide/progressBar/progressBar.html" class="sidebar-link">刻度尺进度条组件</a></li><li><a href="/guide/EchartsMap/EchartsMap.html" aria-current="page" class="active sidebar-link">Echarts地图封装</a></li><li><a href="/guide/px-rem/px-rem.html" class="sidebar-link">vue中px转rem</a></li><li><a href="/guide/uploadJavaServe/uploadJavaServe.html" class="sidebar-link">java后台项目上传宝塔服务器流程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="echarts地图封装"><a href="#echarts地图封装" class="header-anchor">#</a> Echarts地图封装</h1> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><a href="http://39.99.37.143:3000/ZhangMengLin/MapEcharts" target="_blank" rel="noopener noreferrer">组件地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <div class="demo" data-v-4dd5b8ae><div class="component-wrapper" data-v-4dd5b8ae><div class="component-wrapper-demo" data-v-4dd5b8ae>
+        预览组件
+      </div> <div class="code-content" style="height: 0;" data-v-4dd5b8ae><div class="code-content-height" data-v-4dd5b8ae><pre data-v-4dd5b8ae><code class="hljs vue"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">chinaMap</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">:options</span>=<span class="hljs-string">"options"</span> <span class="hljs-attr">:width</span>=<span class="hljs-string">"width"</span> <span class="hljs-attr">:height</span>=<span class="hljs-string">"height"</span> <span class="hljs-attr">:code</span>=<span class="hljs-string">"code"</span> <span class="hljs-attr">:geoCoordMap</span>=<span class="hljs-string">"geoCoordMap"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">chinaMap</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">import</span> chinaMap <span class="hljs-keyword">from</span> <span class="hljs-string">"./echarts/chinaMap"</span>;
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">width</span>: <span class="hljs-string">'100%'</span>,
+        <span class="hljs-attr">height</span>: <span class="hljs-string">'800px'</span>,
+        <span class="hljs-attr">options</span>: {
+          <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">map</span>: <span class="hljs-string">'china'</span>,
+          <span class="hljs-comment">// 是否运行缩放移动</span>
+          <span class="hljs-comment">// 如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启</span>
+          <span class="hljs-attr">roam</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-comment">// 当前视角的中心点</span>
+          <span class="hljs-attr">center</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-comment">// 视角</span>
+          <span class="hljs-comment">// aspectScale:0.75,</span>
+          <span class="hljs-comment">// 当前视角的缩放比例。</span>
+          <span class="hljs-attr">zoom</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-comment">// 滚轮缩放的极限控制</span>
+          <span class="hljs-comment">// scaleLimit: {</span>
+          <span class="hljs-comment">//   max:4,</span>
+          <span class="hljs-comment">//   min:1</span>
+          <span class="hljs-comment">// },</span>
+          <span class="hljs-comment">// 选中地图 single单选  multiple多选</span>
+          <span class="hljs-attr">selectedMode</span>: <span class="hljs-string">'multiple'</span>,
+          <span class="hljs-comment">// 地图上文字样式与显示</span>
+          <span class="hljs-attr">label</span>: {
+            <span class="hljs-attr">show</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">color</span>: <span class="hljs-string">'#fff'</span>,
+            <span class="hljs-attr">emphasis</span>: {
+              <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>
+            }
+          },
+          <span class="hljs-attr">itemStyle</span>: {
+            <span class="hljs-comment">// 地图线条颜色</span>
+            <span class="hljs-attr">normal</span>: {
+              <span class="hljs-attr">areaColor</span>: <span class="hljs-string">'rgba(12,82,124,.9)'</span>,
+              <span class="hljs-attr">borderColor</span>: <span class="hljs-string">'#0A93C6'</span>,
+              <span class="hljs-comment">// 描边线条样式</span>
+              <span class="hljs-attr">borderType</span>: <span class="hljs-string">'solid'</span>,
+              <span class="hljs-comment">// 描边宽度</span>
+              <span class="hljs-attr">borderWidth</span>: <span class="hljs-number">1</span>
+              <span class="hljs-comment">// 设置边框阴影</span>
+              <span class="hljs-comment">//  shadowColor: 'rgba(0, 0, 0, 0.5)',</span>
+              <span class="hljs-comment">//  shadowBlur: 10</span>
+            },
+            <span class="hljs-comment">// 鼠标经过时候的区域颜色</span>
+            <span class="hljs-attr">emphasis</span>: {
+              <span class="hljs-attr">areaColor</span>: <span class="hljs-string">'#355AC3'</span>
+            }
+          },
+          <span class="hljs-comment">// 地图中对特定的区域配置样式。</span>
+          <span class="hljs-attr">regions</span>: [
+            <span class="hljs-comment">// {</span>
+            <span class="hljs-comment">//   name: "河南",</span>
+            <span class="hljs-comment">//   itemStyle: {</span>
+            <span class="hljs-comment">//     areaColor: "red",</span>
+            <span class="hljs-comment">//     color: "red"</span>
+            <span class="hljs-comment">//   }</span>
+            <span class="hljs-comment">// },</span>
+            <span class="hljs-comment">// {</span>
+            <span class="hljs-comment">//   name: "焦作市",</span>
+            <span class="hljs-comment">//   itemStyle: {</span>
+            <span class="hljs-comment">//     areaColor: "red",</span>
+            <span class="hljs-comment">//     color: "red"</span>
+            <span class="hljs-comment">//   }</span>
+            <span class="hljs-comment">// }</span>
+          ]
+        },
+        <span class="hljs-attr">code</span>: <span class="hljs-number">100000</span>,
+        <span class="hljs-attr">geoCoordMap</span>: []
+      };
+    },
+    <span class="hljs-attr">components</span>: {
+      chinaMap
+    },
+    mounted() {
+      <span class="hljs-keyword">this</span>.getList()
+    },
+    <span class="hljs-attr">methods</span>: {
+      getList() {
+        <span class="hljs-comment">// geoCoordMap 数据一般是后台返回的 格式为下面的格式</span>
+        <span class="hljs-keyword">this</span>.geoCoordMap = [{
+            <span class="hljs-attr">name</span>: <span class="hljs-string">'河南'</span>,
+            <span class="hljs-attr">value</span>: [<span class="hljs-number">113.52</span>, <span class="hljs-number">35.22</span>, <span class="hljs-number">1525</span>]
+          },
+          {
+            <span class="hljs-attr">name</span>: <span class="hljs-string">'河南2'</span>,
+            <span class="hljs-attr">value</span>: [<span class="hljs-number">106.3586</span>, <span class="hljs-number">38.1775</span>, <span class="hljs-number">1525</span>]
+          }]
+        <span class="hljs-comment">// 重新渲染地图</span>
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$refs.map.mapChart(<span class="hljs-string">"mapChart"</span>);
+        }, <span class="hljs-number">500</span>);
+      },
+      <span class="hljs-comment">/*  getMap方法说明
+      *  @method 查询省份地图
+      *  @param { Number } code 城市代码
+      *  @param { Array } geoCoordMap 实际值 
+      *  @param { mapMsg } 配置项 
+      */</span>
+      getMap(code, geoCoordMap, mapMsg) {
+        <span class="hljs-keyword">this</span>.code = code;
+        <span class="hljs-keyword">this</span>.geoCoordMap = geoCoordMap;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> mapMsg) {
+          <span class="hljs-keyword">this</span>.options[key] = mapMsg[key];
+        }
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$refs.map.mapChart(<span class="hljs-string">"mapChart"</span>);
+        }, <span class="hljs-number">500</span>);
+      }
+    }
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.home</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#0d2158</span>;
+  }
+  <span class="hljs-selector-class">.btn</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  }
+  <span class="hljs-selector-class">.map</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-comment">/* height: 500px; */</span>
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre></div></div> <div class="lock-code" data-v-4dd5b8ae><i class="el-icon-caret-top icon-down" data-v-4dd5b8ae></i> <span class="lock-code-word" data-v-4dd5b8ae>隐藏代码</span></div></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/12/2021, 9:57:27 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/progressBar/progressBar.html" class="prev">
+        刻度尺进度条组件
+      </a></span> <span class="next"><a href="/guide/px-rem/px-rem.html">
+        vue中px转rem
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2dd97a88.js" defer></script><script src="/assets/js/3.d6f3b588.js" defer></script><script src="/assets/js/45.e5ef185b.js" defer></script><script src="/assets/js/19.e43cf656.js" defer></script>
+  </body>
+</html>

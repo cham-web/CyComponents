@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>截取订单号或者交易号中的部分替换为 &quot;*&quot; | 诚毅物联网</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="诚毅物联网-前端组件库">
+    
+    <link rel="preload" href="/assets/css/0.styles.ed002db5.css" as="style"><link rel="preload" href="/assets/js/app.2dd97a88.js" as="script"><link rel="preload" href="/assets/js/3.d6f3b588.js" as="script"><link rel="preload" href="/assets/js/14.12c7dd0f.js" as="script"><link rel="preload" href="/assets/js/19.e43cf656.js" as="script"><link rel="prefetch" href="/assets/js/10.71c9a9ec.js"><link rel="prefetch" href="/assets/js/11.28fdbcac.js"><link rel="prefetch" href="/assets/js/12.0d90ebcf.js"><link rel="prefetch" href="/assets/js/13.3865491f.js"><link rel="prefetch" href="/assets/js/15.90bc0fac.js"><link rel="prefetch" href="/assets/js/16.7a73d70c.js"><link rel="prefetch" href="/assets/js/17.5ca0ec4a.js"><link rel="prefetch" href="/assets/js/18.8416097b.js"><link rel="prefetch" href="/assets/js/2.0b00b304.js"><link rel="prefetch" href="/assets/js/20.dfe96f99.js"><link rel="prefetch" href="/assets/js/21.a37c1324.js"><link rel="prefetch" href="/assets/js/22.4d106612.js"><link rel="prefetch" href="/assets/js/23.1dd62eb1.js"><link rel="prefetch" href="/assets/js/24.a6d4006f.js"><link rel="prefetch" href="/assets/js/25.a996bf0c.js"><link rel="prefetch" href="/assets/js/26.7ed9654f.js"><link rel="prefetch" href="/assets/js/27.4d78b8e6.js"><link rel="prefetch" href="/assets/js/28.3537c415.js"><link rel="prefetch" href="/assets/js/29.4dcc400d.js"><link rel="prefetch" href="/assets/js/30.ff98ff45.js"><link rel="prefetch" href="/assets/js/31.91456ee5.js"><link rel="prefetch" href="/assets/js/32.574bd189.js"><link rel="prefetch" href="/assets/js/33.16a8eb71.js"><link rel="prefetch" href="/assets/js/34.e3a24877.js"><link rel="prefetch" href="/assets/js/35.ed3ea57a.js"><link rel="prefetch" href="/assets/js/36.927fa32a.js"><link rel="prefetch" href="/assets/js/37.078f68a0.js"><link rel="prefetch" href="/assets/js/38.40baabc6.js"><link rel="prefetch" href="/assets/js/39.6c149c6c.js"><link rel="prefetch" href="/assets/js/4.94ef6b34.js"><link rel="prefetch" href="/assets/js/40.559568c3.js"><link rel="prefetch" href="/assets/js/41.48628e40.js"><link rel="prefetch" href="/assets/js/42.8eae4a37.js"><link rel="prefetch" href="/assets/js/43.43845891.js"><link rel="prefetch" href="/assets/js/44.e2d3d924.js"><link rel="prefetch" href="/assets/js/45.e5ef185b.js"><link rel="prefetch" href="/assets/js/46.b99a54c7.js"><link rel="prefetch" href="/assets/js/47.cede9006.js"><link rel="prefetch" href="/assets/js/48.7c8af905.js"><link rel="prefetch" href="/assets/js/49.b0b27f81.js"><link rel="prefetch" href="/assets/js/5.7a61c163.js"><link rel="prefetch" href="/assets/js/50.9713a8f4.js"><link rel="prefetch" href="/assets/js/51.cd48b1ee.js"><link rel="prefetch" href="/assets/js/52.73809b1e.js"><link rel="prefetch" href="/assets/js/53.5fec2b89.js"><link rel="prefetch" href="/assets/js/54.63e25ebf.js"><link rel="prefetch" href="/assets/js/55.6a947b00.js"><link rel="prefetch" href="/assets/js/56.1ce12488.js"><link rel="prefetch" href="/assets/js/57.a885e5ea.js"><link rel="prefetch" href="/assets/js/58.ebfbcc6a.js"><link rel="prefetch" href="/assets/js/59.ff65077e.js"><link rel="prefetch" href="/assets/js/6.4a9aeafb.js"><link rel="prefetch" href="/assets/js/60.a05227d4.js"><link rel="prefetch" href="/assets/js/61.83957611.js"><link rel="prefetch" href="/assets/js/62.84c2eabf.js"><link rel="prefetch" href="/assets/js/63.9ebbcd16.js"><link rel="prefetch" href="/assets/js/64.8bf72306.js"><link rel="prefetch" href="/assets/js/65.4b897cc0.js"><link rel="prefetch" href="/assets/js/66.47792baa.js"><link rel="prefetch" href="/assets/js/67.4bfffe40.js"><link rel="prefetch" href="/assets/js/68.bdbbc350.js"><link rel="prefetch" href="/assets/js/69.2b6a4baf.js"><link rel="prefetch" href="/assets/js/7.fc1a8f85.js"><link rel="prefetch" href="/assets/js/70.7e160bbc.js"><link rel="prefetch" href="/assets/js/71.7bd14ea0.js"><link rel="prefetch" href="/assets/js/72.a25355f0.js"><link rel="prefetch" href="/assets/js/73.6f350bf7.js"><link rel="prefetch" href="/assets/js/74.54f7fa1e.js"><link rel="prefetch" href="/assets/js/8.6a81b744.js"><link rel="prefetch" href="/assets/js/9.96065467.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ed002db5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="诚毅物联网" class="logo"> <span class="site-name can-hide">诚毅物联网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link router-link-active">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  vue页面及组件
+</a></div><div class="nav-item"><a href="/uniapp/" class="nav-link">
+  UNIAPP页面及组件
+</a></div><div class="nav-item"><a href="/fun/" class="nav-link router-link-active">
+  常用js方法总结
+</a></div><div class="nav-item"><a href="/Css/" class="nav-link">
+  常用Css样式总结
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fun/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>公用js方法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fun/com/input.html" class="sidebar-link">正则验证</a></li><li><a href="/fun/request/request.html" class="sidebar-link">封装请求</a></li><li><a href="/fun/PictureUpload/PictureUpload.html" class="sidebar-link">uni-app 图片上传</a></li><li><a href="/fun/VersionUpdate/VersionUpdate.html" class="sidebar-link">uni-app 版本更新</a></li><li><a href="/fun/WechatJSSDK/WechatJSSDK.html" class="sidebar-link">微信 JSSDK 授权</a></li><li><a href="/fun/WechatCode/WechatCode.html" class="sidebar-link">微信公众号获取Code与用户信息</a></li><li><a href="/fun/RouteRefresh/RouteRefresh.html" class="sidebar-link">vue后台 点击侧边栏 刷新当前路由</a></li><li><a href="/fun/JavaSocket/JavaSocket.html" class="sidebar-link">java中使用socket的方法</a></li><li><a href="/fun/webScanCode/webScanCode.html" class="sidebar-link">WEB页面扫码</a></li><li><a href="/fun/base64/base64.html" class="sidebar-link">base64文件与图片转换</a></li><li><a href="/fun/DeepCopy/DeepCopy.html" class="sidebar-link">简单深拷贝</a></li><li><a href="/fun/countDown/countDown.html" class="sidebar-link">倒计时</a></li><li><a href="/fun/ShakeProof/ShakeProof.html" class="sidebar-link">防抖节流</a></li><li><a href="/fun/TimeFiltering/TimeFiltering.html" class="sidebar-link">时间过滤</a></li><li><a href="/fun/canvas/canvas.html" class="sidebar-link">简单canvas</a></li><li><a href="/fun/CompressPicture/CompressPicture.html" class="sidebar-link">JS压缩图片</a></li><li><a href="/fun/AgeShift/AgeShift.html" class="sidebar-link">年龄转换</a></li><li><a href="/fun/compute/compute.html" class="sidebar-link">处理前端js运算浮点数位数问题</a></li><li><a href="/fun/payment/payment.html" class="sidebar-link">uniapp 支付</a></li><li><a href="/fun/Amap/amap.html" class="sidebar-link">vue后台高德地图</a></li><li><a href="/fun/utilIndex/utilIndex.html" aria-current="page" class="active sidebar-link">截取订单号或者交易号中的部分替换为 &quot;***&quot;</a></li><li><a href="/fun/wxVersion/wxVersion.html" class="sidebar-link">微信小程序 版本更新</a></li><li><a href="/fun/DownloadStreamFile/DownloadStreamFile.html" class="sidebar-link">后台下载Excel流文件</a></li><li><a href="/fun/BTunlock/BTunlock.html" class="sidebar-link">uniapp蓝牙开锁demo</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="截取订单号或者交易号中的部分替换为"><a href="#截取订单号或者交易号中的部分替换为" class="header-anchor">#</a> 截取订单号或者交易号中的部分替换为 &quot;***&quot;</h1> <div class="demo" data-v-4dd5b8ae><div class="component-wrapper" data-v-4dd5b8ae><div class="component-wrapper-demo" data-v-4dd5b8ae><div class="flex-center" data-v-4dd5b8ae><div class="input-with-select el-input" style="width:200px;margin-right:10px;"><!----><input type="text" autocomplete="off" placeholder="请输入一个加数" class="el-input__inner"><!----><!----><!----><!----></div> <div class="input-with-select el-input" style="width:200px;margin-right:10px;"><!----><input type="number" autocomplete="off" placeholder="请输入被替换部分的长度（要小于原数据长度）" class="el-input__inner"><!----><!----><!----><!----></div></div> <span data-v-4dd5b8ae>结果：</span> <div class="flex-center" data-v-4dd5b8ae><button type="button" slot="append" class="el-button input-with-select el-button--default" style="margin-right:10px;"><!----><!----><span>结果</span></button> <div class="flex-center input-with-select" data-v-4dd5b8ae>12345***12142</div></div></div> <div class="code-content" style="height: 0;" data-v-4dd5b8ae><div class="code-content-height" data-v-4dd5b8ae><pre data-v-4dd5b8ae><code class="hljs vue"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">demo</span> <span class="hljs-attr">:codeStr</span>=<span class="hljs-string">"str"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">el-input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入一个加数"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:200px;margin-right:10px;"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"no"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-with-select"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">el-input</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">el-input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入被替换部分的长度（要小于原数据长度）"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:200px;margin-right:10px;"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"lengthNum"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-with-select"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">el-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>结果：<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">el-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"append"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"margin-right:10px;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-with-select"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"getResult"</span>&gt;</span>结果<span class="hljs-tag">&lt;/<span class="hljs-name">el-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-center input-with-select"</span>&gt;</span>{{resultNum}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">demo</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">no</span>: <span class="hljs-string">'12345678945145212142'</span>,
+        <span class="hljs-attr">lengthNum</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">resultNum</span>:<span class="hljs-string">''</span>,
+      }
+    },
+    created(){
+      <span class="hljs-keyword">this</span>.getResult()
+    },
+    <span class="hljs-attr">methods</span>: {
+      getResult(){
+        <span class="hljs-keyword">this</span>.resultNum = <span class="hljs-keyword">this</span>.cutNo(<span class="hljs-keyword">this</span>.no,<span class="hljs-keyword">this</span>.lengthNum)
+      },
+      <span class="hljs-comment">/**
+       * <span class="hljs-doctag">@description </span>截取订单号或者交易号中的部分替换为'***'
+       * <span class="hljs-doctag">@param <span class="hljs-type">{String|Number}</span> </span>no 订单号或者交易号
+       * <span class="hljs-doctag">@param <span class="hljs-type">{Number}</span> </span>length 被替换部分的长度（要小于原数据长度）
+       * */</span>
+      cutNo(no,length){
+        <span class="hljs-keyword">let</span> surplusLength = no.length - length; <span class="hljs-comment">// 剩余的长度</span>
+        <span class="hljs-keyword">let</span> startEnd = (surplusLength/<span class="hljs-number">2</span>); <span class="hljs-comment">// 前面的结尾</span>
+        <span class="hljs-keyword">let</span> endStart = -startEnd; <span class="hljs-comment">// 后面的开头</span>
+        <span class="hljs-keyword">return</span> no.slice(<span class="hljs-number">0</span>,startEnd)+<span class="hljs-string">'***'</span>+no.slice(endStart);
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.flex-center</span> {
+  <span class="hljs-comment">/* #ifndef APP-NVUE */</span>
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-comment">/* #endif */</span>
+  <span class="hljs-attribute">flex-direction</span>: row;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+}
+<span class="hljs-selector-class">.input-with-select</span>{
+  <span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">10px</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre></div></div> <div class="lock-code" data-v-4dd5b8ae><i class="el-icon-caret-top icon-down" data-v-4dd5b8ae></i> <span class="lock-code-word" data-v-4dd5b8ae>隐藏代码</span></div></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/12/2021, 9:57:27 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fun/Amap/amap.html" class="prev">
+        vue后台高德地图
+      </a></span> <span class="next"><a href="/fun/wxVersion/wxVersion.html">
+        微信小程序 版本更新
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2dd97a88.js" defer></script><script src="/assets/js/3.d6f3b588.js" defer></script><script src="/assets/js/14.12c7dd0f.js" defer></script><script src="/assets/js/19.e43cf656.js" defer></script>
+  </body>
+</html>
